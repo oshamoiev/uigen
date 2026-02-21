@@ -70,6 +70,10 @@ JWT-based sessions via `jose`, stored in an `httpOnly` cookie (`auth-token`). `s
 
 `Project.messages` stores the full Vercel AI SDK message array as JSON. `Project.data` stores the serialized `VirtualFileSystem` as JSON. Both are written in the `onFinish` callback of `streamText` in the chat route.
 
+### Database Schema
+
+The database schema is defined in `prisma/schema.prisma`. Reference it anytime you need to understand the structure of data stored in the database.
+
 ### UI Layout
 
 `MainContent` (`src/app/main-content.tsx`) wraps everything in `FileSystemProvider` → `ChatProvider` and renders a two-panel resizable layout: chat on the left, preview/code editor on the right. The code view adds a nested resizable with a file tree + Monaco editor.
